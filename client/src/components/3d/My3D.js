@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-import { Model } from "../3d/Setup";
+import { Model } from "./Macbook";
 import { useState } from "react";
 
 export default function My3D() {
@@ -17,7 +17,7 @@ export default function My3D() {
         {lights && (
           <>
             <OrbitControls enableZoom={false} />
-            <Environment preset="forest" />
+            <Environment preset="forest" blur={100} />
             <shadowMaterial transparent opacity={0.2} />
             <ambientLight intensity={0.5} />
             <directionalLight position={[-4, 5, 3]} intensity={1} />

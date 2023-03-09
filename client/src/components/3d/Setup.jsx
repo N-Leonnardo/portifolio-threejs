@@ -43,7 +43,7 @@ export function Model(props) {
   }
 
   return (
-    <PerspectiveCamera position={[-1.5, 0, 0]}>
+    <PerspectiveCamera position={[0, 0, 0]}>
       <group {...props} dispose={null} scale={0.045}>
         <mesh
           geometry={

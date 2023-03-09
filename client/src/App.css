@@ -59,6 +59,15 @@
   border-radius: 0px !important;
 }
 
+.project-card-bg {
+  /* Created with https://www.css-gradient.com */
+  /* Created with https://www.css-gradient.com */
+  background: #e6e6e6;
+  background: -webkit-linear-gradient(top right, #e6e6e6, #989898);
+  background: -moz-linear-gradient(top right, #e6e6e6, #989898);
+  background: linear-gradient(to bottom left, #e6e6e6, #989898);
+}
+
 @media only screen and (max-width: 900px) {
   .ws-title {
     right: 35px !important;
