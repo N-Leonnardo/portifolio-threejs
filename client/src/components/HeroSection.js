@@ -19,10 +19,10 @@ export default function HeroSection() {
           WELCOME <br /> TO MY <br /> WORLD
         </h1>
         <div className="links flex items-center justify-evenly w-28">
-          <a href="">
+          <a href="https://github.com/N-Leonnardo">
             <AiFillGithub className="text-2xl" />
           </a>
-          <a href="">
+          <a href="https://www.linkedin.com/in/leonnardo-n/">
             <AiFillLinkedin className="text-2xl" />
           </a>
           <a href="">

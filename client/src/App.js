@@ -10,6 +10,7 @@ import HeroSection from "./components/HeroSection";
 import About from "./components/About";
 import {
   Fullpage,
+  FullpageNavigation,
   FullpageSection,
   FullPageSections,
 } from "@ap.cx/react-fullpage";
@@ -79,6 +80,7 @@ function HomePage() {
       <Alert />
       <Suspense fallback={<Loading />}>
         <Fullpage>
+          <FullpageNavigation style={{ zIndex: "100" }} />
           <FullPageSections>
             <FullpageSection id="Home">
               <HeroSection />

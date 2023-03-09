@@ -1,11 +1,23 @@
 import React, { useEffect } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Model } from "./Macbook";
 import { useState } from "react";
+import { easing } from "maath";
 
 export default function My3D() {
   const [lights, setLights] = useState(true);
+
+  function Rig() {
+    return useFrame((state, delta) => {
+      easing.damp3(
+        state.camera.position,
+        [0.2 + state.mouse.x / 2, 0.05 + state.mouse.y / 4, 5],
+        0.5,
+        delta
+      );
+    });
+  }
 
   return (
     <div>
@@ -24,6 +36,7 @@ export default function My3D() {
           </>
         )}
         <Model />
+        <Rig />
       </Canvas>
     </div>
   );

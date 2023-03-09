@@ -7,10 +7,10 @@ import react from "../../media/myDriverApp.svg";
 export default function ProjectCard(props) {
   return (
     <div className="x-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 z-50">
-      <div className="grid project-card-bg gap-10 lg:grid-cols-2 p-20 rounded-xl">
+      <div className="grid bg-base-100 gap-10 lg:grid-cols-2 p-20 rounded-xl md: p-10 mx-4">
         <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
           <div className="max-w-xl mb-6">
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none text-black">
+            <h2 className="max-w-lg mb-6 text-black font-sans text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none text-black">
               {props.title}
             </h2>
             <p className="text-base md:text-lg text-black">{props.desc}</p>
@@ -18,7 +18,8 @@ export default function ProjectCard(props) {
           <div>
             <div className="technologies my-2">
               <span className="font-medium text-black"> Technologies: </span>
-              <div className="tech-icons flex my-2 ">
+
+              <div className="tech-icons text-black flex my-2 ">
                 {props.technologies?.map((tech) => {
                   console.log(tech);
                   return <img src={tech} alt="" className="w-8 mx-2" />;
